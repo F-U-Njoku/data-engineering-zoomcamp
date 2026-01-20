@@ -209,3 +209,16 @@ __marimo__/
 
 data/
 .vscode/
+
+# Terraform
+*.tfstate
+*.tfstate.backup
+*.tfvars
+*.tfvars.json
+.terraform/
+*.tfplan
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
