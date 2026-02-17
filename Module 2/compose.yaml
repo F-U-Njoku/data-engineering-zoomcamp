@@ -46,6 +46,11 @@ services:
     # To run Kestra in a rootless mode in production, see: https://kestra.io/docs/installation/podman-compose
     user: "root"
     command: server standalone
+    volumes:
+      - kestra_data:/app/storage
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /tmp/kestra-wd:/tmp/kestra-wd
+      - ../.env/zoomcamp.json:/app/zoomcamp.json
     environment:
       KESTRA_CONFIGURATION: |
         datasources:
@@ -71,13 +76,10 @@ services:
             tmpDir:
               path: /tmp/kestra-wd/tmp
           url: http://localhost:8080/
+      GOOGLE_APPLICATION_CREDENTIALS: "/app/zoomcamp.json"
     ports:
       - "8080:8080"
       - "8081:8081"
-    volumes:
-      - kestra_data:/app/storage
-      - /var/run/docker.sock:/var/run/docker.sock
-      - /tmp/kestra-wd:/tmp/kestra-wd
     depends_on:
       kestra_postgres:
         condition: service_healthy
