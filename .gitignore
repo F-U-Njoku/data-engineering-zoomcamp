@@ -208,6 +208,11 @@ __marimo__/
 
 
 data/
+Data/
+Module 4/taxi_rides_ny/data/
+Module 4/taxi_rides_ny/taxi_rides_ny.duckdb 
+Module 4/taxi_rides_ny/prod.duckdb
+
 .vscode/
 
 # Terraform
