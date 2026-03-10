@@ -1,0 +1,30 @@
+sources:
+  - name: raw
+    description: "Raw data for FHV trip data for the year 2019."
+    database: fhv
+    schema: prod
+    tables: 
+    - name: fhv_tripdata
+      description: "This table contains the FHV trip data for the year 2019."
+      columns:
+        - name: dispatching_base_num
+          description: "The unique identifier for the dispatching base."
+        - name: Affiliated_base_number
+          description: "The unique identifier for the affiliated base."
+        - name: pickup_datetime
+          description: "The date and time when the trip started."
+        - name: dropoff_datetime
+          description: "The date and time when the trip ended."
+        - name: PULocationID
+          description: "The location ID where the trip started."
+        - name: DOLocationID
+          description: "The location ID where the trip ended."
+        - name: SR_Flag
+          description: "A flag indicating whether the trip was a shared ride or not."
+      config:
+          loaded_at_field: pickup_datetime
+
+    config:
+      freshness:
+        warn_after: {count: 24, period: hour}
+        error_after: {count: 48, period: hour}

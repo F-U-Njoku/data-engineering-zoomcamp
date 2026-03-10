@@ -60,3 +60,10 @@ FROM `zoomca.dbt_unjoku.fct_monthly_zone_revenue`
 where service_type='Green' and revenue_month = '2019-10-01';
 ```
 
+### Question 6. Build a Staging Model for FHV Data
+
+What is the count of records in stg_fhv_tripdata? **43,244,693**
+```SQL
+SELECT count(*) 
+FROM prod.stg_fhv_tripdata
+```

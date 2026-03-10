@@ -209,9 +209,9 @@ __marimo__/
 
 data/
 Data/
-Module 4/taxi_rides_ny/data/
-Module 4/taxi_rides_ny/taxi_rides_ny.duckdb 
-Module 4/taxi_rides_ny/prod.duckdb
+Module 4/for_hire_vehicle/fhv/data/
+Module 4/for_hire_vehicle/fhv/fhv.duckdb
+Module 4/for_hire_vehicle/fhv/prod.fhv.duckdb
 
 .vscode/
 

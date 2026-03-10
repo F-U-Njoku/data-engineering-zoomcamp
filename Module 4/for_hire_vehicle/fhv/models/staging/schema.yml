@@ -1,0 +1,27 @@
+models:
+  - name: stg_fhv_tripdata
+    description: >
+      Staging model for FHV trip data for the year 2019.
+      This model standardizes the column names and formats 
+      and prepares the data for downstream transformations.
+    columns:
+      - name: dispatching_base_number
+        description: "The unique identifier for the dispatching base."
+        data_tests:
+          - not_null
+      - name: affiliated_base_number
+        description: "The unique identifier for the affiliated base."
+      - name: pickup_datetime
+        description: "The date and time when the trip started."
+        data_tests:
+          - not_null
+      - name: dropOff_datetime
+        description: "The date and time when the trip ended."
+        data_tests:
+          - not_null
+      - name: pickup_location_id
+        description: "The location ID where the trip started."
+      - name: dropoff_location_id
+        description: "The location ID where the trip ended."
+      - name: shared_request_flag
+        description: "A flag indicating whether the trip was a shared ride or not."
