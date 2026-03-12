@@ -227,3 +227,7 @@ override.tf
 override.tf.json
 *_override.tf
 *_override.tf.json
+.bruin.yml
+logs/runs
+logs/*.log
+*.py[cod]
