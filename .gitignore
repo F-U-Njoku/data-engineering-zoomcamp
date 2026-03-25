@@ -231,3 +231,6 @@ override.tf.json
 logs/runs
 logs/*.log
 *.py[cod]
+
+Module 5/
+duckdb.db
